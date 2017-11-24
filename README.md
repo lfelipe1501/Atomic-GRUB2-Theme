@@ -1,13 +1,13 @@
 # Atomic-GRUB2-Theme
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lfelipe1501/Nginxy/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lfelipe1501/Atomic-GRUB2-Theme/issues)
 
 Theme for the Grub2 at the purest ATOMIC style
 ![Atomic-Theme](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/Atomic-GRUB2-theme.gif)
 
 # Install
 
-- clone the repository
+- clone the repository git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git
 
 ### Contact / Social Media
 
