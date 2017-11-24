@@ -7,6 +7,8 @@ Theme for the Grub2 at the purest ATOMIC style
 
 # Install
 
+- clone the repository
+
 ### Contact / Social Media
 
 *Get the latest News about Web Development, Open Source, Tooling, Server & Security*
