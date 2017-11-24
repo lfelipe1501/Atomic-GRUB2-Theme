@@ -14,8 +14,13 @@ Theme for the Grub2 at the purest ATOMIC style
   ```bash
   GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
   ```
-  ![capture2](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture2.png)
+![capture2](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture2.png)
 
+# Tips and tricks
+
+To use all the icons set in the theme if one is not shown, you can add the class manually in your **grub.cfg** file, as follows:
+![capture4](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture4.png)
+![capture3](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture3.png)
 
 ### Contact / Social Media
 
