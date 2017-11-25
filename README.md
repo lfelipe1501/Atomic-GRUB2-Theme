@@ -11,9 +11,9 @@ Theme for the Grub2 at the purest ATOMIC style
 - Copy the folder **Atomic/** in the themes folder where GRUB is installed:
 ![capture1](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture1.png)
 - Edit **/etc/default/grub** and place the ATOMIC theme path with your text file **theme.txt**
-  ```bash
-  GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
-  ```
+```bash
+GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
+```
 ![capture2](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture2.png)
 
 # Tips and tricks
