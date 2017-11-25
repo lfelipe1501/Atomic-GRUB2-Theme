@@ -9,7 +9,7 @@ Theme for the Grub2 at the purest ATOMIC style
 
 - clone the repository `git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git`
 - Copy the folder **Atomic/** in the themes folder where GRUB is installed:
- ![capture1](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture1.png)
+![capture1](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture1.png)
 - Edit **/etc/default/grub** and place the ATOMIC theme path with your text file **theme.txt**
   ```bash
   GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
