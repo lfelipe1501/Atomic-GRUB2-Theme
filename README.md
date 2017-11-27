@@ -27,6 +27,7 @@ GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
 # Tips and tricks
 
 To use all the icons set in the theme if one is not shown, you can add the class manually in your **grub.cfg** file, as follows:
+
 ![capture4](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture4.png)
 ![capture3](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture3.png)
 
