@@ -7,6 +7,12 @@ Theme for the Grub2 at the purest ATOMIC style
 
 # Install
 
+### Installer
+- Clone the repository `git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git`
+- Run the installer included in the folder with the name **install.sh** - Remember to run it with the *__sudo__* command or as the *__root__* user, as shown in the following screenshot:
+![Atomic-Installer](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/installer.png)
+
+### Manual
 - Clone the repository `git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git`
 - Copy the folder **Atomic/** in the themes folder where GRUB is installed:
 ![capture1](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture1.png)
@@ -15,6 +21,8 @@ Theme for the Grub2 at the purest ATOMIC style
 GRUB_THEME="/boot/grub/themes/Atomic/theme.txt"
 ```
 ![capture2](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/capture2.png)
+- Generate your grub configuration file again (sudo update-grub or grub-mkconfig)
+- enjoy
 
 # Tips and tricks
 
