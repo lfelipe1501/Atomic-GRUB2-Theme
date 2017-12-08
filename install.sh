@@ -23,6 +23,14 @@ function copy_atomic_files() {
 
 function main() {
 
+  # Check user is root
+  if [ $UID == 0 ]; then
+	echo "Yes, You are root!"
+  else
+  	echo "No, You must be root!"
+	exit 1
+  fi
+
   # Check which grub
   if [ -d "/boot/grub" ]; then
 	  GRUB_NAME="grub"
@@ -54,3 +62,4 @@ function main() {
 }
 
 main "$@"
+exit 0
