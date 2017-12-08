@@ -17,8 +17,10 @@ function update_grub_file() {
 }
 
 function copy_atomic_files() {
+  echo -e "\e[1m\e[32m==> \e[97mDownloading files...\e[0m"
+  git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme /tmp/Atomic-GRUB2-Theme
   echo -e "\e[1m\e[32m==> \e[97mCopying files...\e[0m"
-  cp -rf Atomic /boot/${GRUB_NAME}/themes/
+  cp -rf /tmp/Atomic-GRUB2-Theme/Atomic /boot/${GRUB_NAME}/themes/
 }
 
 function main() {
