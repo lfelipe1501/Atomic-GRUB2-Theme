@@ -1,15 +1,45 @@
 #!/usr/bin/env bash
 
-main() {
+GRUB_NAME=""
 
-  if [ -d "/boot/grub" ]
-  then
-    echo -e "\e[1m\e[32m==> \e[97mCopying files...\e[0m"
-    cp -rf Atomic /boot/grub/themes/
+function compile_grub() {
+  echo -e "\e[1m\e[32m==> \e[97mApplying changes...\e[0m"
+  ${GRUB_NAME}-mkconfig -o /boot/${GRUB_NAME}/grub.cfg
+  echo -e "\e[1m\e[34m  -> \e[97mTheme successfuly applied!"
+  echo -e "\e[1m\e[34m  -> \e[97mRestart your PC to check it out."
+  sleep 2
+}
+
+function update_grub_file() {
+  grep -v GRUB_THEME < /etc/default/grub > /tmp/clean_grub
+  mv /tmp/clean_grub /etc/default/grub
+  echo "GRUB_THEME=/boot/${GRUB_NAME}/themes/Atomic/theme.txt" >> /etc/default/grub
+}
+
+function copy_atomic_files() {
+  echo -e "\e[1m\e[32m==> \e[97mDownloading files...\e[0m"
+  git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme /tmp/Atomic-GRUB2-Theme
+  echo -e "\e[1m\e[32m==> \e[97mCopying files...\e[0m"
+  cp -rf /tmp/Atomic-GRUB2-Theme/Atomic /boot/${GRUB_NAME}/themes/
+}
+
+function main() {
+
+  # Check user is root
+  if [ $UID == 0 ]; then
+	echo "Yes, You are root!"
   else
-    echo -e "\e[1m\e[32m==> \e[97mCopying files...\e[0m"
-    cp -rf Atomic /boot/grub2/themes/
+  	echo "No, You must be root!"
+	exit 1
   fi
+
+  # Check which grub
+  if [ -d "/boot/grub" ]; then
+	  GRUB_NAME="grub"
+  else
+	  GRUB_NAME="grub2"
+  fi
+  copy_atomic_files
 
   echo -e "\e[1m\e[97m  You must set the theme in your GRUB config file,"
   while : ;do
@@ -19,29 +49,11 @@ main() {
       read -p "  Would you like to do it now? [y/n] " -t 10 answer
       echo -e "\e[0m"
       if [ "$answer" = "y" ];then
-        if [ -d "/boot/grub" ];then
-          echo -e "  \e[5mEdit the line that begins with GRUB_THEME\e[0m"
-          echo -e "  \e[7mGRUB_THEME=/boot/grub/themes/Atomic/theme.txt\e[0m"
-          sleep 5
-          nano /etc/default/grub
-          echo -e "\e[1m\e[32m==> \e[97mApplying changes...\e[0m"
-          grub-mkconfig -o /boot/grub/grub.cfg
-          echo -e "\e[1m\e[34m  -> \e[97mTheme successfuly applied!"
-          echo -e "\e[1m\e[34m  -> \e[97mRestart your PC to check it out."
-          sleep 2
-          break
-        else
-          echo -e "  \e[5mEdit the line that begins with GRUB_THEME\e[0m"
-          echo -e "  \e[7mGRUB_THEME=/boot/grub2/themes/Atomic/theme.txt\e[0m"
-          sleep 5
-          nano /etc/default/grub
-          echo -e "\e[1m\e[32m==> \e[97mApplying changes...\e[0m"
-          grub2-mkconfig -o /boot/grub2/grub.cfg
-          echo -e "\e[1m\e[34m  -> \e[97mTheme successfuly applied!"
-          echo -e "\e[1m\e[34m  -> \e[97mRestart your PC to check it out."
-          sleep 2
-          break
-        fi
+	# backup old grub file
+	cp /etc/default/grub /tmp/grub$(date '+%m-%d-%y_%H:%M:%S')
+	update_grub_file
+        compile_grub
+	break
       elif [ "$answer" = "n" ];then
         break
       fi
@@ -52,3 +64,4 @@ main() {
 }
 
 main "$@"
+exit 0
