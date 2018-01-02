@@ -8,9 +8,8 @@ Theme for the Grub2 at the purest ATOMIC style :sunglasses:
 # Install
 
 ### Installer
-- Clone the repository `git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git`
-- Run the installer included in the folder with the name **install.sh** - Remember to run it with the *__sudo__* command or as the *__root__* user, as shown in the following screenshot:
-![Atomic-Installer](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/Atomic-installer.png)
+- Just run this command in your terminal.
+<code>sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lfelipe1501/Atomic-GRUB2-Theme/master/install.sh)"</code>
 
 ### Manual
 - Clone the repository `git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme.git`
