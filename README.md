@@ -1,4 +1,4 @@
-# <a href="https://www.lfsystems.com.co"><img src="https://cn.pling.com/img/d/1/9/e/34ca796826e3886a5232d81f1b598e1ccdc4.png" width="80" height="80"></a> <a href="https://www.gnome-look.org/p/1200710/">Atomic-GRUB2-Theme</a>
+# <a href="https://www.lfsystems.com.co"><img src="https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/AtomicGRUB/logo.png" width="80" height="80"></a> <a href="https://www.gnome-look.org/p/1200710/">Atomic-GRUB2-Theme</a>
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lfelipe1501/Atomic-GRUB2-Theme/issues)
 
