@@ -23,7 +23,7 @@ GIT_IS_AVAILABLE=$?
   fi
 
 GRUB_NAME=""
-UPDATE_BRUB=""
+UPDATE_GRUB=""
 
 function compile_grub() {
   echo -e "\e[1m\e[32m==> \e[97mApplying changes...\e[0m"
