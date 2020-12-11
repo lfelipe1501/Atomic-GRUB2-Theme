@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 echo ""
-echo "\e[97mThis script installs the theme in the default paths\e[0m"
-echo "\e[1m\e[32m==> \e[97m\e[100m/boot/grub\e[0m"
-echo "and"
-echo "\e[1m\e[32m==> \e[97m\e[100m/boot/grub2\e[0m"
-echo "and compile this in the same paths with the command"
-echo "\e[1m\e[34m-> \e[97m\e[100mgrub-mkconfig -o /boot/grub/grub.cfg\e[0m"
+echo -e "\e[97mThis script installs the theme in the default paths\e[0m"
+echo -e "\e[1m\e[32m==> \e[97m\e[100m/boot/grub\e[0m"
+echo -e "and"
+echo -e "\e[1m\e[32m==> \e[97m\e[100m/boot/grub2\e[0m"
+echo -e "and compile this in the same paths with the command"
+echo -e "\e[1m\e[34m-> \e[97m\e[100mgrub-mkconfig -o /boot/grub/grub.cfg\e[0m"
 echo "or"
-echo "\e[1m\e[34m-> \e[97m\e[100mgrub2-mkconfig -o /boot/grub2/grub.cfg\e[0m"
+echo -e "\e[1m\e[34m-> \e[97m\e[100mgrub2-mkconfig -o /boot/grub2/grub.cfg\e[0m"
 echo ""
-echo "\e[5m\e[44mif you use a custom path for your Grub"
-echo "you need to adjust this script or theme to your needs...\e[0m"
+echo -e "\e[5m\e[44mif you use a custom path for your Grub"
+echo -e "you need to adjust this script or theme to your needs...\e[0m"
 echo ""
 
 git --version 2>&1 >/dev/null
