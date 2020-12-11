@@ -11,7 +11,7 @@ Theme for the Grub2 at the purest ATOMIC style :sunglasses:
 Just run this command in your terminal.
 
 ```bash
-$ sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lfelipe1501/Atomic-GRUB2-Theme/master/install.sh)"
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lfelipe1501/Atomic-GRUB2-Theme/master/install.sh)"
 ```
 
 ### Manual
