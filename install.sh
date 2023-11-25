@@ -21,6 +21,14 @@ GIT_IS_AVAILABLE=$?
   	echo -e "Git command is not installed, please install!"
 	exit 1
   fi
+  
+rsync -V 2>&1 >/dev/null
+RSYNC_IS_AVAILABLE=$?
+
+  if [ $RSYNC_IS_AVAILABLE -ne 0 ]; then
+  	echo -e "Rsync command is not installed, please install!"
+	exit 1
+  fi
 
 GRUB_NAME=""
 UPDATE_GRUB=""
@@ -45,7 +53,7 @@ function copy_atomic_files() {
   echo -e "\e[1m\e[32m==> \e[97mDownloading files...\e[0m"
   git clone https://github.com/lfelipe1501/Atomic-GRUB2-Theme /tmp/Atomic-GRUB2-Theme
   echo -e "\e[1m\e[32m==> \e[97mCopying files...\e[0m"
-  cp -rf /tmp/Atomic-GRUB2-Theme/Atomic /boot/${GRUB_NAME}/themes/
+  rsync -uah /tmp/Atomic-GRUB2-Theme/Atomic /boot/${GRUB_NAME}/themes/
 }
 
 function get_distro() {
